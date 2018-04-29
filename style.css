@@ -46,8 +46,8 @@ a:link,a:visited{
   font-size:20px;
   list-style: none;
   border-bottom:1px solid gray;
-  -webkit-padding-start: 20%;
-  -webkit-padding-end: 20%;
+  padding-left: 20%;
+  padding-right: 20%;
 
 }
 #menu ul a{
@@ -82,7 +82,7 @@ a:link,a:visited{
 }
 #article{
   padding-left:25px;
-  text-align: -webkit-center;
+  text-align: center;
 }
 /* 미디어쿼리: 반응형 웹 */
 @media(max-width:450px){
