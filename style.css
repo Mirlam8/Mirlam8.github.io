@@ -6,14 +6,18 @@
 4. 태그선택자
 */
 html, body {
-  height:100%; overflow:hidden;
-  margin: 0;
+  height:100%;
+  padding: 0px;
+  margin: 0px;
+  min-height: 100%;
+  overflow: auto;
 }
 a:link,a:visited{
   text-decoration: none; color:black;
 }
 #wrap{
   height: 100%;
+  overflow: auto;
   width: auto;
 }
 /* 목차부분 */
