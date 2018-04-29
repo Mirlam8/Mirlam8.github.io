@@ -5,16 +5,16 @@
 3. class
 4. 태그선택자
 */
-body{
+html, body {
+  height:100%; overflow:hidden;
   margin: 0;
 }
 a:link,a:visited{
   text-decoration: none; color:black;
 }
 #wrap{
-  height: auto;
+  height: 100%;
   width: auto;
-  position: relative;
 }
 /* 목차부분 */
 #menu{
