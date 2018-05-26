@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="d3.min.js"></script>
+    <script src="topojson.js"></script>
+    <script src="datamaps.world.min.js"></script>
+  </head>
+  <body>
+    <div id="container" style="position: relative; width: 100%; height: 50%;"></div>
+      <script>
+      var countrys = [
+        ["베트남","VNM"],["그리스","GRC"],["이탈리아","ITA"],["파키스탄","PAK"],["필리핀","PHL"],
+        ["태국","THA"],["일본","JPN"],["우크라이나","UKR"],["중국","CHN"],["인도","IND"],
+        ["스페인","ESP"],["프랑스","FRA"],["멕시코","MEX"],["스위스","CHE"],["포르투갈","PRT"],
+        ["한국","KOR"],["스웨덴","SWE"],["몬테네그로","MNE"],["호주","AUS"],["미국","USA"],
+        ["캐나다","CAN"],["브라질","BRA"],["독일","DEU"],["러시아","RUS"],["터키","TUR"],
+        ["인도네시아","IDN"]];
+        var dataset = {};
+        countrys.forEach(function(data){
+          var lang = data[0], id = data[1];
+          dataset[id] = {kor_Lang: lang, fillKey: 'green' };
+        });
+        // 지도 그리기
+          var map = new Datamap({
+            element: document.getElementById('container'),
+            responsive: true,
+            fills: {
+              'green': '#bada55',
+              defaultFill: '#F5F5F5'
+            },
+            data: dataset,
+            geographyConfig: {
+              borderColor: '#DEDEDE',
+              highlightBorderWidth: 2,
+              highlightBorderColor: '#ff6363',
+              popupTemplate: function(geo, data){  // 지도 팝업 텍스트
+                if(!data){return;}
+                return ['<div class="hoverinfo">','<strong>',geo.properties.name,'</strong>',
+                        '<br><strong>',data.kor_Lang,'</strong>','</div>'].join('');
+              }
+
+            },
+            done: function(datamap) { // 클릭시 이동
+                     datamap.svg.selectAll('.datamaps-subunit').on('click', function(geography) {
+                       document.location.href = "https://www.google.co.kr/search?q=" + geography.properties.name;
+                     });
+            }
+          });
+          $(window).on('resize', function() {
+             map.resize();
+          });
+      </script>
+  </body>
+</html>
