@@ -1,94 +1,142 @@
-
-/*  셀렉터 우선순위
-1. 스타일속성
-2. id
-3. class
-4. 태그선택자
-*/
-html, body {
-  height:100%;
-  padding: 0px;
-  margin: 0px;
-  min-height: 100%;
-  overflow: auto;
+body{
+    height: 900px;
+    margin: 0;
+    padding: 0;
+    color: black;
+    background-color: #E5E5E5;
+    line-height: 1.3;
 }
-a:link,a:visited{
-  text-decoration: none; color:black;
+a{
+    text-decoration: none;
+    color: black;
 }
-#wrap{
-  height: 100%;
-  overflow: auto;
-  width: auto;
+a:hover{
+    text-decoration: underline;
 }
-/* 목차부분 */
-#menu{
-  display: block;
-  font-size:20px;
-  margin:0;
-  padding:20px;
+#wrapper{
+    width: 100%;
+    height: 100%;
 }
-#menu h1{
-  font-size:60px;
-  border: 2px solid gray;
-  text-align: center;
-  margin:0;
-  padding:20px;
-  height: 100px;
-  background-image: url(home.jpg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: right;
+#header{
+    margin: 5px 20px 10px 10px;
+    border-width: 0px;
+    background-color: #E5E5E5;
 }
-#menu ul{
-  display: grid;
-  margin: 0;
-  grid-template-columns:1fr 1fr 1fr;
-  font-size:20px;
-  list-style: none;
-  border-bottom:1px solid gray;
-  padding-left: 20%;
-  padding-right: 20%;
-
+#sidebar{
+    margin: 0px 8px 15px 12px;
+    float: left;
+    width: 150px;
+    padding: 0;
+    font-size: 9pt;
 }
-#menu ul a{
-  background-color:transparent;
-  float: left;
-  vertical-align: middle;
-  width: auto;
-  border: 0px;
-  margin: 0;
-  padding: 0;
-  padding: 7px;
-  text-align: center;
+#sidebar .sidepanel{
+    margin: 0 0 10px 0;
+    float: right;
+    width: 150px;
+    border: 1px solid #808080;
+    font-size: 1.0em;
+    background-color: #F0F3F8;
+    border-radius: 6px;
 }
-#menu ul a:hover{
-  background-color: #a1d3ff;
+#sidebar .sidepanel ul{
+    list-style-type: none;
 }
-.season_button{
-  width:70px;
-  height:30px;
-  border:2px solid #34495e;
-  background-color: #34495e;
-  margin-right:20px;
-  text-align:center;
-  color: #FFFFFF;
+#sidebar .sidepanel h1{
+    margin: 0;
+    padding: 0.2em 10px;
+    border: none;
+    font-size: 1.0em;
+    color: white;
+    background-color: #4A6AB0;
+    text-align: right;
+    text-shadow: none;
 }
-.season_button:hover{
-  width:70px;
-  height:30px;
-  border:2px solid #34495e;
-  background-color: #FFFFFF;
-  color: #000000;
-  transition:all .5s ease;
-  z-index:1;
+#sidebar .sidepanel li{
+    margin: 0;
+    padding: 2px 10px;
+    text-align: right;
 }
-#article{
-  padding-left:25px;
-  text-align: center;
+#logo{
+    margin: 0;
+    font-size: 28pt;
+    font-style: italic;
+    font-weight: bold;
+    text-shadow: #909090 2px 1px 2px;
 }
-/* 미디어쿼리: 반응형 웹 */
-@media(max-width:450px){
-  #menu ul{
-  display: none;
-  }
+#logo a{
+    color: #4A6AB0;
+}
+#logo a:hover{
+    color: black;
+    text-decoration: underline;
+}
+#page{
+    margin: 0px 15px 10px 175px;
+    border: 1px solid #808080;
+    border-radius: 6px;
+    font-size: 12pt;
+    line-height: 1.5;
+    color: black;
+    background-color: white;
+}
+#pagecontrol{
+    font-size: 9pt;
+    font-weight: bold;
+    margin: 0;
+    border: none;
+    padding: 1px 10px;
+    color: white;
+    background-color: #4A6AB0;
+    text-align: right;
+    text-shadow: none;
+}
+#pagecontrol a{
+    color: white;
+}
+#pagetitle{
+    margin: 20px 25px 25px 25px;
+    text-shadow: #999999 2px 1px 3px;
+    font-size: 1.7em;
+    font-weight: bold;
+}
+#content{
+    margin: 25px;
+}
+h1{
+    font-size: 1.45em;
+    border-bottom: 2px solid #4A6AB0;
+    text-shadow: #999999 2px 1px 2px;
+    margin: 2ex 0 0.8ex 0;
+    font-weight: bold;
+}
+strong{
+    font-weight: bold;
+    font-size: larger;
+}
+.http{
+    color: #0044B3;
+    background-color: transparent;
+    text-decoration: none;
+}
+.http:hover{
+    text-decoration: underline;
+    background-color: #D0E6FF;
+}
+hr{
+    height: 1px;
+    background-color: #c0c0c0;
+    border: none;
+}
+#content li {
+    margin: 0.5em 0;
+}
+.table-of-contents {
+    color: inherit;
+    background: #F0F2F4;
+    border: dotted #9c9c9c 1px;
+    font-size: small;
+    text-align: left;
+    margin: 3px;
+    width: 60%;
+    line-height: 100%;
 }
