@@ -140,3 +140,6 @@ hr{
     width: 60%;
     line-height: 100%;
 }
+#hide{
+    display: none;
+}
