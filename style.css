@@ -144,3 +144,11 @@ hr{
 #hide{
     display: none;
 }
+h2{
+    font-size: 1.25em;
+    padding-left: 0.3em;
+    border-left: 10px solid #4A6AB0;
+    line-height: 120%;
+    text-shadow: #999999 2px 1px 2px;
+    margin: 2ex 0 0.8ex 0;
+}
